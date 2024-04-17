@@ -1,5 +1,34 @@
-
-<p>create works!</p>
-
-<button class="btn btn-primary" (click)="setUser()" type="submit" >Create User</button>
-
+@if(!isSubmited){
+    <div class="card flex justify-content-center">
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input pInputText id="username" [(ngModel)]="setValue.productName" />
+            <label for="username">Username</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input pInputText id="categoryId" [(ngModel)]="setValue.categoryId" />
+            <label for="email">CategoryId</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input pInputText id="productPrice" [(ngModel)]="setValue.productPrice" />
+            <label for="login">Product Price</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input type="text" pInputText id="productDescription" [(ngModel)]="setValue.productDescription" />
+            <label for="password">Product Description</label>
+        </span>
+        <br>
+        <p-button label="Submit" icon="pi pi-check" (click)="start()" iconPos="right"></p-button>
+    </div>
+    
+}
+@else{
+    <h1>Malumotlar yaratildi</h1>
+}

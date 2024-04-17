@@ -3,6 +3,10 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UserModel } from '../models/user-model';
 import { CreateUser } from '../models/createUser';
+export interface Message {
+  mes:string,
+  
+}
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +19,6 @@ export class CrudServiceService {
     return this.http.get<UserModel[]>(this.baseUrl + 'GetAll')
   }
   create(data: CreateUser): Observable<CreateUser> {
-    return this.http.post<CreateUser>(this.baseUrl + 'CreateUser', data)
+    return this.http.post<CreateUser>(this.baseUrl + 'Create', data)
   }
 }

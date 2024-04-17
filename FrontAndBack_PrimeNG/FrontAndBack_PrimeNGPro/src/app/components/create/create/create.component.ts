@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { CrudServiceService } from '../../../services/crud.service';
+
+import { Component } from '@angular/core';
+import { CrudServiceService, Message } from '../../../services/crud.service';
 import { CreateUser } from '../../../models/createUser';
 
 @Component({
@@ -7,40 +8,29 @@ import { CreateUser } from '../../../models/createUser';
   templateUrl: './create.component.html',
   styleUrl: './create.component.scss'
 })
-export class CreateComponent implements OnInit {
+export class CreateComponent {
+setValue:CreateUser={
+  productName: "",
+  categoryId:0,
+  productPrice: 0,
+  productDescription: "", 
 
-  resultData! : CreateUser;
-
-  setValue: CreateUser = {
-
+}
+resultdata!:Message;
+isSubmited:boolean=false;
+constructor(private crud:CrudServiceService){}
+create(data:CreateUser){
+this.crud.create(data).subscribe({
+  next: (res)=>{
+    this.resultdata=res;
+    this.isSubmited=true;
+  },
+  error: (err)=>{
+    console.log(err);
   }
-
-  constructor(private crudService: CrudServiceService) {
-
-  }
-
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
-  createUser(data: CreateUser) {
-     this.crudService.create(data).subscribe({
-      next: (result) => {
-        this.resultData = result;
-        console.log(result);
-      },
-      error: (err) => {
-        console.log(`Error ketti: ${err}`);
-      }
-    });
-  }
-
-  setUser() {
-    this.createUser(this.setValue);
-    
-  }
-
-
-
-
+});
+}
+start(){
+  this.create(this.setValue);
+}
 }
