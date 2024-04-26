@@ -30,6 +30,7 @@ import { UserDetailsComponent } from './admin/user/user-details/user-details.com
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { RegisterComponent } from './pages/register/register.component';
     ReactiveFormsModule,
     MatSnackBarModule,
     RouterLink,
-    HttpClientModule
+    HttpClientModule,
+    TranslocoRootModule
   ],
   providers: [
     provideAnimationsAsync(),

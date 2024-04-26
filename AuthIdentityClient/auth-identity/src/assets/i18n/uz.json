@@ -1,0 +1,20 @@
+{
+    "title": "Salom Dunyo!",
+    "form": {
+       "My-app": "Meni dasturim",
+       "Login": "Kirish",
+       "Register": "Registratsiya",
+       "Sign Up": "Registratsiya",
+       "Email": "Pochta",
+       "Password": "Parol",
+       "login-to-your-account": "Akkauntingizga kirish",
+       "dont-have-an-account?": "Akkaunt yo'qmi?",
+       "Username": "Foydalanuvghi ismi",
+       "First Name": "Ism",
+       "Last Name": "Familiya",
+       "Age": "Yoshi",
+       "Roles": "Rollar",
+       "have-an-account": "Akkauntingiz bormi?",
+       "create-new-acc": "Yangi akkaunt yaratish"
+      }
+}

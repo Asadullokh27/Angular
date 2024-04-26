@@ -6,7 +6,7 @@
 
     <div class="content"> 
 
-     <h2>Sign Up</h2> 
+     <h2>{{'form.Sign Up' | transloco}}</h2> 
 
      <form [formGroup]="formRegister" (ngSubmit)="register()">
 
@@ -14,50 +14,50 @@
              
              <div class="inputBox"> 
                  
-                 <input type="text" formControlName="username" required> <i>Username</i> 
+                 <input type="text" formControlName="username" required> <i>{{'form.Username' | transloco}}</i> 
                  
                 </div> 
                 
                 <div class="inputBox"> 
                     
-                    <input type="text" formControlName="firstname" required> <i>First Name</i> 
+                    <input type="text" formControlName="firstname" required> <i>{{'form.First Name' | transloco}}</i> 
                     
                 </div> 
                 
                 <div class="inputBox"> 
                     
-                    <input type="text" formControlName="lastname" required> <i>Last Name</i> 
+                    <input type="text" formControlName="lastname" required> <i>{{'form.Last Name' | transloco}}</i> 
                     
                 </div> 
                 
                 <div class="inputBox"> 
                     
-                    <input type="number" formControlName="age" required> <i>Age</i> 
+                    <input type="number" formControlName="age" required> <i>{{'form.Age' | transloco}}</i> 
                     
                 </div> 
                 
                 <div class="inputBox"> 
                     
-                    <input type="text" formControlName="email" required> <i>Email</i> 
+                    <input type="text" formControlName="email" required> <i>{{'form.Email' | transloco}}</i> 
                     
                 </div> 
                 
                 
                 <div class="inputBox"> 
                     
-                    <input type="password" formControlName="password" required> <i>Password</i> 
+                    <input type="password" formControlName="password" required> <i>{{'form.Password' | transloco}}</i> 
                     
                 </div> 
                 
                 <div class="inputBox"> 
                     
-                    <input type="text" formControlName="roles" required> <i>Roles</i> 
+                    <input type="text" formControlName="roles" required> <i>{{'form.Roles' | transloco}}</i> 
                     
                 </div> 
                 
                 
                 <button type="submit">
-                    Sign Up
+                    {{'form.Sign Up' | transloco}}
                 </button>
                 
                 

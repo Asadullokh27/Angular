@@ -1,0 +1,18 @@
+{
+    "title": "Hello World!",
+    "form": {
+       "My-app": "My app",
+       "Login": "Login",
+       "Register": "Register",
+       "Sign Up": "Sign Up",
+       "Email": "Email",
+       "Password": "Password",
+       "login-to-your-account": "Login to your account",
+       "dont-have-an-account?": "Don't have an account?",
+       "Username": "FullName",
+       "First Name": "First Name",
+       "Last Name": "Last Name",
+       "Age": "Age",
+       "Roles": "Roles"
+      }
+}

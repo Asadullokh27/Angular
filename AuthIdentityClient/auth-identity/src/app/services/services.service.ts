@@ -40,4 +40,8 @@ export class AuthService {
       })
     );
   }
+
+  logout(){
+    localStorage.setItem(this.tokenKey, '');
+  }
 }
