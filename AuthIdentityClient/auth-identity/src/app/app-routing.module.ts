@@ -6,6 +6,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { StudentProfileComponent } from './admin/students/student-profile/student-profile.component';
 import { UserComponent } from './admin/user/user.component';
 import { loginGuard, registerGuard, studentProfileGuard, usersGuard } from './auth.guard';
+import { TestComponent } from './components/test/test.component';
+import { TestdataComponent } from './components/testdata/testdata.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent,canActivate: [registerGuard] },
   { path: 'users', component: UserComponent, canActivate: [usersGuard] },
   { path: 'student-profile', component: StudentProfileComponent, canActivate: [studentProfileGuard] },
+  { path: 'test', component: TestComponent,},
+  { path: 'testdata', component: TestdataComponent },
   { path: '**', component: HomeComponent },
 ];
 

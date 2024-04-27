@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {
   FormBuilder,
   FormGroup,
+  FormsModule,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
@@ -31,6 +33,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { TranslocoRootModule } from './transloco-root.module';
+import { TestComponent } from './components/test/test.component';
+import { TestdataComponent } from './components/testdata/testdata.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,9 @@ import { TranslocoRootModule } from './transloco-root.module';
     StudentsComponent,
     StudentDetailComponent,
     StudentProfileComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    TestComponent,
+    TestdataComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +65,7 @@ import { TranslocoRootModule } from './transloco-root.module';
     MatSnackBarModule,
     RouterLink,
     HttpClientModule,
-    TranslocoRootModule
+    TranslocoRootModule,
   ],
   providers: [
     provideAnimationsAsync(),

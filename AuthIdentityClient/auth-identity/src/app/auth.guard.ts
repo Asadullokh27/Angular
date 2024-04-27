@@ -6,7 +6,9 @@ var userRouter  = false;
 var adminRouter  = true;
 var tokenKey = 'token';
 
-
+export const authGuard: CanActivateFn = (route, state) => {
+  return true;
+}
 
 
 export const loginGuard: CanActivateFn = (route, state) => {
