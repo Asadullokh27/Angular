@@ -1,1 +1,8 @@
-<p>user works!</p>
+<app-student-profile [myText]="currentText"></app-student-profile>
+
+
+<app-student-profile (newItemEvent)="addItem($event)"></app-student-profile>
+
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+  </ul>

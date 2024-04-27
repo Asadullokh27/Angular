@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
+  currentText: string = "This is text";
 
+  items = ['test'];
+
+  addItem(newItem: string) {
+    this.items.push(newItem);
+  }
 }

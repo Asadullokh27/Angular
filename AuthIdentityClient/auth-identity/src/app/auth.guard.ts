@@ -1,6 +1,7 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import { jwtDecode } from 'jwt-decode';
+import { BehaviorSubject } from 'rxjs';
 
 var userRouter  = false;
 var adminRouter  = true;
@@ -85,4 +86,6 @@ export const studentProfileGuard: CanActivateFn = (route, state) => {
   console.log('navigate boldi');
   router.navigate(['/login'])
   return false;
+
+
 };

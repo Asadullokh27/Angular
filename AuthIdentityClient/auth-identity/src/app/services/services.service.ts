@@ -3,7 +3,7 @@ import { Injectable, inject } from '@angular/core';
 import { environment } from '../../environment/environments.developers';
 import { Router } from '@angular/router';
 import { LoginRequest } from '../interfaces/login-request';
-import { Observable, map } from 'rxjs';
+import { BehaviorSubject, Observable, map } from 'rxjs';
 import { LoginResponse } from '../interfaces/login-responce';
 import { RegisterRequest } from '../interfaces/register-request';
 import { RegisterResponse } from '../interfaces/register-response';
@@ -43,5 +43,12 @@ export class AuthService {
 
   logout(){
     localStorage.setItem(this.tokenKey, '');
+  }
+
+  private message = new BehaviorSubject("Initial message!");
+  getMessage = this.message.asObservable();
+
+  setMessage(message: string) {
+    this.message.next(message)
   }
 }
