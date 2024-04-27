@@ -1,1 +1,8 @@
-<p>students works!</p>
+<h1>Input</h1>
+<h1>{{myText}}</h1>
+
+
+
+<label for="item-input">Add an item(Output):</label>
+<input type="text" id="item-input" #newItem style="background-color: black; color: white;">
+<button type="button" (click)="addNewItem(newItem.value)">Add to parent's list</button>
